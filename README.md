@@ -40,6 +40,34 @@ The `Secret` object contains sensitive data such as the PostgreSQL password. Ens
 - **Redis**: A single-replica deployment for caching.
 - **Mail Server**: A lightweight deployment of MailDev with 2 replicas for SMTP and UI access.
 
+## Cluster with Minikube
+
+If you are using Minikube, ensure it is running with sufficient resources. Start Minikube with the following command:
+
+```sh
+minikube start
+```
+
+Port-forward your Minikube IP to localhost:
+
+```sh
+minikube tunnel
+```
+
+Start the Minikube dashboard:
+
+```sh
+minikube dashboard
+```
+
+To enable the `ingress` addon, run:
+
+```sh
+minikube addons enable ingress
+```
+
+
+
 ## Deployment Steps
 
 ### 1. Apply Configurations
